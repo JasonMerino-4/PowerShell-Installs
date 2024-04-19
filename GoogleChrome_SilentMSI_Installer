@@ -1,0 +1,11 @@
+#########################
+#Chrome Installer
+#
+#Jason Merino
+#########################
+
+#UPDATE this path to where you msi is downloaded
+$msiPath = `"C:\Users\jason\Downloads\googlechromestandaloneenterprise64.msi`"
+
+#Start Installation
+Start-Process -FilePath "$env:windir\system32\msiexec.exe" -ArgumentList "/i $msiPath /qn" -Wait -PassThru
